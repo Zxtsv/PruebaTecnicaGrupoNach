@@ -16,27 +16,32 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `genders`
+-- Table structure for table `employees`
 --
 
-DROP TABLE IF EXISTS `genders`;
+DROP TABLE IF EXISTS `employees`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `genders` (
+CREATE TABLE `employees` (
   `id` int NOT NULL AUTO_INCREMENT,
+  `gender_id` int DEFAULT NULL,
+  `job_id` int DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL,
+  `last_name` varchar(255) DEFAULT NULL,
+  `birthdate` date DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `genders`
+-- Dumping data for table `employees`
 --
 
-LOCK TABLES `genders` WRITE;
-/*!40000 ALTER TABLE `genders` DISABLE KEYS */;
-/*!40000 ALTER TABLE `genders` ENABLE KEYS */;
+LOCK TABLES `employees` WRITE;
+/*!40000 ALTER TABLE `employees` DISABLE KEYS */;
+INSERT INTO `employees` VALUES (1,1,1,'Bernardo','Pérez','2002-05-16'),(2,2,1,'Hugo','Gonzalez','2004-02-21'),(11,2,1,'Prueba','Apellido','2002-05-15'),(12,2,1,'Prueba2','Apellido','2002-05-15'),(16,2,2,'Prueba20','Apellido','2002-05-15'),(18,2,2,'Prueba201','Apellido','2002-05-15'),(27,2,1,'Prueba2015','Apellido','2002-05-15');
+/*!40000 ALTER TABLE `employees` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -48,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-05-25 17:56:17
+-- Dump completed on 2022-05-25 18:16:32

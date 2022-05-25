@@ -16,29 +16,27 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `employee_worked_hours`
+-- Table structure for table `genders`
 --
 
-DROP TABLE IF EXISTS `employee_worked_hours`;
+DROP TABLE IF EXISTS `genders`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `employee_worked_hours` (
+CREATE TABLE `genders` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `employee_id` int DEFAULT NULL,
-  `worked_hours` int DEFAULT NULL,
-  `worked_date` date DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `employee_worked_hours`
+-- Dumping data for table `genders`
 --
 
-LOCK TABLES `employee_worked_hours` WRITE;
-/*!40000 ALTER TABLE `employee_worked_hours` DISABLE KEYS */;
-/*!40000 ALTER TABLE `employee_worked_hours` ENABLE KEYS */;
+LOCK TABLES `genders` WRITE;
+/*!40000 ALTER TABLE `genders` DISABLE KEYS */;
+/*!40000 ALTER TABLE `genders` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -50,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-05-25 17:56:17
+-- Dump completed on 2022-05-25 18:16:32
